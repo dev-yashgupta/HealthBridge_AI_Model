@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home - Clinical Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1b21",
+                        "error": "#ba1a1a",
+                        "background": "#faf8ff",
+                        "on-tertiary-container": "#fe9562",
+                        "on-secondary-fixed-variant": "#005047",
+                        "surface-tint": "#365bad",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary-container": "#006f62",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#103e8f",
+                        "on-background": "#1a1b21",
+                        "surface-container-highest": "#e2e2e9",
+                        "tertiary-container": "#752c00",
+                        "on-tertiary-fixed": "#351000",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#511c00",
+                        "on-primary-fixed-variant": "#174293",
+                        "surface": "#faf8ff",
+                        "primary": "#002869",
+                        "on-primary-fixed": "#001946",
+                        "surface-container": "#eeedf5",
+                        "surface-variant": "#e2e2e9",
+                        "surface-bright": "#faf8ff",
+                        "on-secondary-fixed": "#00201b",
+                        "on-primary": "#ffffff",
+                        "outline": "#747783",
+                        "on-surface-variant": "#434651",
+                        "surface-dim": "#dad9e1",
+                        "secondary-fixed-dim": "#7ad7c6",
+                        "tertiary-fixed": "#ffdbcc",
+                        "secondary-fixed": "#97f3e2",
+                        "secondary-container": "#94f0df",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7a3003",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e7ef",
+                        "secondary": "#006b5e",
+                        "inverse-surface": "#2f3036",
+                        "outline-variant": "#c4c6d3",
+                        "inverse-primary": "#b1c5ff",
+                        "inverse-on-surface": "#f1f0f8",
+                        "surface-container-low": "#f4f3fa",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#8eadff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #1a1b21;
+            color: #dae2ff;
+        }
+        .neon-accent {
+            box-shadow: 0 0 15px rgba(151, 243, 226, 0.3);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(26, 27, 33, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#1a1b21] opacity-80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden outline outline-2 outline-secondary-fixed/30 p-0.5">
+<img alt="User profile portrait" class="w-full h-full object-cover rounded-full" data-alt="Close-up portrait of a professional woman with a calm expression in a modern medical setting, soft teal ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDWbBKmbZcXKC0e1KV9RPtusHFjp0hpH8I-MNYBcsKow-tnDL2hgoN-WE0khvinPjZ2XvXJSKCHUkKlToum_Ph65vn-D3bhdXLhP77h5oEHMjTtvz643WjzxVAVIHrpNxc8iYwLow0wLzPXIjyZ_C6DvcjxZikBb0QI02zLUiLmB89UYTOVcYTyBqa46D1rAC9q1yuIraqpcLGh4LlRMrickTXV_Zd9HKjdDJJIM8zkp3LtMj5kFmzz1cLm-1JHCC1baKps_ELIOQ"/>
+</div>
+<span class="font-headline font-semibold tracking-tight text-lg text-[#dae2ff]">Clinical Precision</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#2b2d35] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#dae2ff]">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-28 px-6 max-w-7xl mx-auto space-y-8">
+<!-- Welcome Section -->
+<section class="space-y-2">
+<h1 class="font-headline text-3xl font-extrabold tracking-tight text-[#dae2ff]">Welcome back, Alex</h1>
+<p class="text-on-surface-variant text-lg">Your health baseline is stable today. Take a moment for a quick check.</p>
+</section>
+<!-- Bento Grid Activity & Quick Links -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Health Activity Summary (Double Width) -->
+<div class="md:col-span-2 bg-[#1a1b21] rounded-xl p-8 outline outline-1 outline-[#c4c6d3]/15 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-12 bg-secondary-fixed/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary-fixed opacity-80 mb-1 block">Recent Activity</span>
+<h2 class="text-2xl font-headline font-bold text-[#dae2ff]">Cardiovascular Health</h2>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">show_chart</span>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-4">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">Resting Heart Rate</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-extrabold text-[#dae2ff]">68</span>
+<span class="text-on-surface-variant text-sm">bpm</span>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant text-sm mb-1">Blood Pressure</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-extrabold text-[#dae2ff]">118/76</span>
+<span class="text-on-surface-variant text-sm">mmHg</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 pt-4 border-t border-[#c4c6d3]/10">
+<p class="text-sm text-on-surface-variant flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                        Last measured 4 hours ago via Clinical Sync
+                    </p>
+</div>
+</div>
+<!-- Quick Link: Symptom Checker -->
+<div class="bg-primary-container rounded-xl p-8 flex flex-col justify-between text-white relative overflow-hidden group active:scale-95 transition-transform duration-200 cursor-pointer">
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl mb-8">medical_services</span>
+<div>
+<h3 class="text-xl font-headline font-bold mb-2">Checker</h3>
+<p class="text-[#8eadff] text-sm leading-relaxed">Start an AI-guided medical assessment for new symptoms.</p>
+</div>
+</div>
+</div>
+<!-- Second Row: History & Tips -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Health History Preview -->
+<div class="bg-[#1a1b21] rounded-xl outline outline-1 outline-[#c4c6d3]/15 overflow-hidden">
+<div class="p-6 border-b border-[#c4c6d3]/10 flex justify-between items-center">
+<h3 class="font-headline font-bold text-[#dae2ff]">History</h3>
+<button class="text-secondary-fixed text-xs font-bold uppercase tracking-tighter">View All</button>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center gap-4 bg-[#2b2d35]/30 p-4 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-[#dae2ff]">history</span>
+</div>
+<div class="flex-1">
+<p class="text-[#dae2ff] font-medium text-sm">Routine Check-up</p>
+<p class="text-on-surface-variant text-xs">Completed Oct 12, 2023</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 bg-[#2b2d35]/30 p-4 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">lab_research</span>
+</div>
+<div class="flex-1">
+<p class="text-[#dae2ff] font-medium text-sm">Blood Lab Results</p>
+<p class="text-on-surface-variant text-xs">Verified Oct 05, 2023</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Health Tips Carousel-style Card -->
+<div class="bg-[#1a1b21] rounded-xl outline outline-1 outline-[#c4c6d3]/15 overflow-hidden flex flex-col">
+<div class="h-48 relative">
+<img alt="Health tip visual" class="w-full h-full object-cover" data-alt="Artistic shot of fresh mint leaves floating in clear water with sunlight filtering through creating soft highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdW_-T-7m9CvbG771Ly02tVqt_14Ft_hoHVH_x61YRgWaLsjjbkoZJsuRJIVUWb2KqUYl_gYa82UD4AOs11A_7QADPSNJDoD3PQCsJey5H7nxie1XXjTZfuUBu4_TE8yvC8vdzizPSrZzY2hsqV5WeVFy4sJdnn8khB-YEJXoxqG6Y45wQ6YtgPaCi5bFVkvUK6lPVditXfiirDdb4ms3JHGad4dqiGcrQ_hwVbO2TNoQfY9ld787TqbGoic5EhID2wjG6W7h8_D8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a1b21] via-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">Daily Insight</span>
+<h3 class="text-xl font-headline font-bold text-[#dae2ff]">The Power of Hydration</h3>
+</div>
+</div>
+<div class="p-6 flex-1">
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Maintaining optimal hydration levels can improve cognitive function by up to 30%. Aim for 2.5L of water today to keep your energy baseline peak.</p>
+<button class="flex items-center gap-2 text-secondary-fixed text-sm font-semibold hover:gap-3 transition-all">
+                        Read Full Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Trust Badge -->
+<div class="flex justify-center">
+<div class="flex items-center gap-2 bg-secondary-fixed/10 px-4 py-2 rounded-full border border-secondary-fixed/20">
+<span class="material-symbols-outlined text-secondary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-secondary-fixed text-[11px] font-bold uppercase tracking-widest">Clinically Verified Insights</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-[#1a1b21] border-t border-[#c4c6d3]/15 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-2 pb-safe pt-2">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#002869] text-[#dae2ff] rounded-xl px-4 py-1.5 transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5">home</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</a>
+<!-- Checker -->
+<a class="flex flex-col items-center justify-center text-[#c4c6d3] px-4 py-1.5 hover:bg-[#2b2d35] transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5">medical_services</span>
+<span class="font-['Inter'] text-[11px] font-medium">Checker</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-[#c4c6d3] px-4 py-1.5 hover:bg-[#2b2d35] transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5">history</span>
+<span class="font-['Inter'] text-[11px] font-medium">History</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#c4c6d3] px-4 py-1.5 hover:bg-[#2b2d35] transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

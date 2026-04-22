@@ -1,0 +1,42 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P202
+  Report Time  : 16 Apr 2026, 07:21 PM
+  Input Text   : "pet mein dard, loose motion, ulti"
+  Duration     : Unknown
+  NLP Method   : Hybrid (BERT + Keyword)
+  BERT Suggest : Tuberculosis (62%)
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * stomach_pain                        [weight: 5]
+  * diarrhoea                           [weight: 6]
+  * vomiting                            [weight: 5]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : stomach_pain, diarrhoea, vomiting
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Paralysis (brain hemorrhage)    41.1%  [ !] MEDIUM
+       Matched  : vomiting
+
+  #2  Drug Reaction                   38.3%  [  ] LOW
+       Matched  : stomach_pain
+       Missing  : burning_micturition
+
+  #3  Malaria                         37.2%  [  ] LOW
+       Matched  : diarrhoea, vomiting
+       Missing  : high_fever
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Paralysis (brain hemorrhage)):
+  -> MRI brain, CT scan, Neurologist consult
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

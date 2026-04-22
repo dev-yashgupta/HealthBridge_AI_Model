@@ -1,0 +1,40 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P001
+  Report Time  : 13 Apr 2026, 12:09 AM
+  Input Text   : "2 din se bukhar hai, sar dard aur ulti bhi ho rahi hai"
+  Duration     : 2 day(s)
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * headache                            [weight: 3]
+  * high_fever                          [weight: 7]
+  * vomiting                            [weight: 5]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : high_fever, headache, nausea, vomiting
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Malaria                         67.7%  [ !] MEDIUM  [history boost]
+       Matched  : headache, high_fever, nausea, vomiting
+       Missing  : diarrhoea
+
+  #2  Paralysis (brain hemorrhage)    65.7%  [ !] MEDIUM
+       Matched  : headache, vomiting
+
+  #3  (vertigo) Paroymsal  Positional Vertigo  55.4%  [ !] MEDIUM  [history boost]
+       Matched  : headache, nausea, vomiting
+       Missing  : spinning_movements
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Malaria):
+  -> RDT, Peripheral smear, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

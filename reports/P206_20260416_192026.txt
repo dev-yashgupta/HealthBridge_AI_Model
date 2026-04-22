@@ -1,0 +1,40 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P206
+  Report Time  : 16 Apr 2026, 07:20 PM
+  Input Text   : "high fever and severe headache for 2 days, vomiting also"
+  Duration     : 2 day(s)
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * high_fever                          [weight: 7]
+  * headache                            [weight: 3]
+  * vomiting                            [weight: 5]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : high_fever, headache, vomiting
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Paralysis (brain hemorrhage)    65.7%  [ !] MEDIUM
+       Matched  : headache, vomiting
+
+  #2  Malaria                         50.7%  [ !] MEDIUM
+       Matched  : headache, high_fever, vomiting
+       Missing  : diarrhoea
+
+  #3  Jaundice                        44.5%  [ !] MEDIUM
+       Matched  : high_fever, vomiting
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Paralysis (brain hemorrhage)):
+  -> MRI brain, CT scan, Neurologist consult
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

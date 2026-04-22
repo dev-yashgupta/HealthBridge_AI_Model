@@ -1,0 +1,41 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : GUEST
+  Report Time  : 18 Apr 2026, 09:49 PM
+  Input Text   : "tb"
+  Duration     : Not specified
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * Blackheads                          [severity: 2/7]
+  * Pus Filled Pimples                  [severity: 2/7]
+  * Scurring                            [severity: 2/7]
+  * Skin Rash                           [severity: 3/7]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-18 : Headache, High Fever, Nausea, Cough, Blackheads, Pus Filled Pimples, Scurring, Skin Rash
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Acne                           100.0%  [!!] HIGH
+       Matched  : Blackheads, Pus Filled Pimples, Scurring, Skin Rash
+
+  #2  Impetigo                        60.5%  [ !] MEDIUM  [history boost]
+       Matched  : High Fever, Skin Rash
+
+  #3  Malaria                         50.7%  [ !] MEDIUM  [history boost]
+       Matched  : Headache, High Fever, Nausea
+       Missing  : Diarrhoea
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Acne):
+  -> Clinical diagnosis, Hormonal panel
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Consult a doctor today. These symptoms may be serious.
+
+-- DISCLAIMER ----------------------------------------------
+  This report is an AI-based suggestion only.
+  Please consult a registered medical professional for diagnosis.
+============================================================

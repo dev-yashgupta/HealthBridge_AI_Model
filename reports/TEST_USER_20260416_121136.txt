@@ -1,0 +1,40 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : TEST_USER
+  Report Time  : 16 Apr 2026, 12:11 PM
+  Input Text   : "Mera sir dard ho raha hai aur tez bukhar hai 2 din se."
+  Duration     : 2 day(s)
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * high_fever                          [weight: 7]
+  * headache                            [weight: 3]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : high_fever, headache
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Impetigo                        42.4%  [ !] MEDIUM
+       Matched  : high_fever
+
+  #2  AIDS                            38.3%  [  ] LOW
+       Matched  : high_fever
+       Missing  : patches_in_throat
+
+  #3  Malaria                         33.8%  [  ] LOW
+       Matched  : headache, high_fever
+       Missing  : diarrhoea
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Impetigo):
+  -> Swab culture, Clinical diagnosis
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

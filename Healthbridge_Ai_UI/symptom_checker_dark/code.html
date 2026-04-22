@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClinicaPulse - Symptom Checker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22d3ee",
+                        "on-primary": "#001946",
+                        "surface": "#040916",
+                        "surface-container": "#0b1429",
+                        "surface-container-high": "#111b33",
+                        "on-surface": "#e2e8f0",
+                        "on-surface-variant": "#94a3b8",
+                        "outline": "#334155",
+                        "outline-variant": "#1e293b",
+                        "accent": "#f472b6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "manrope": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+        }
+        .premium-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-[#060e20]/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full shadow-[0_20px_40px_rgba(143,245,255,0.06)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-2xl" data-icon="clinical_notes">clinical_notes</span>
+<h1 class="text-lg font-bold tracking-widest text-cyan-400 font-manrope uppercase">ClinicaPulse</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-cyan-400/30 active:scale-95 duration-200 cursor-pointer">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="close-up portrait of a professional female doctor in a white lab coat with a warm and reassuring smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDooAjTqejuh07H6se-4tUg2lSW6NZGEZd5MYTScYejTJo3K7Xrq4O1-5XJLUwEeU-LZ-jeyp8Yjr8fUah7Tpo20bKEoLa00E2CTRKdk0Xl5hqqJpm63HHZXEQLG6YreRyjJ6bKU4tYmFgAevgYfWA1N95EpbKdrwYeDIBUWdpS63_qVFBLQqKCgEtXkTJkF0PmpyHA5zWXzIjVu_1PcKkO8hQklIrtriTMHUv6Cr_l8c9TjRwGp4pSB2neJvKXlx587XtrVTViTg"/>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12 relative">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<div class="relative z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Diagnostic Assistant v2.0</span>
+<h2 class="text-5xl md:text-6xl font-headline font-extrabold text-white leading-tight mb-6">
+                How are you <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">feeling</span> today?
+            </h2>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                Describe your symptoms. Our clinical AI analyzes data in real-time to provide immediate medical insights and next steps.
+            </p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Primary Form Area -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Main Input Card -->
+<div class="bg-surface-container border border-outline/10 rounded-2xl p-6 md:p-8 glow-cyan relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-start gap-4 mb-8">
+<div class="p-3.5 rounded-xl bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<div class="flex-1">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3" for="symptom-input">Medical Symptoms</label>
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-xl font-medium text-white placeholder:text-slate-600 resize-none min-h-[140px]" id="symptom-input" placeholder="e.g. Sharp pain in lower back after lifting heavy furniture..."></textarea>
+</div>
+</div>
+<!-- Quick Select Chips -->
+<div class="pt-6 border-t border-outline/10">
+<p class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.15em] mb-4">Quick Select</p>
+<div class="flex flex-wrap gap-2.5">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Fever</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Headache</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Cough</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Nausea</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Fatigue</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary/20 hover:text-primary border border-outline/10 transition-all text-sm font-semibold active:scale-95">Dizziness</button>
+</div>
+</div>
+</div>
+<!-- Parameters Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Duration -->
+<div class="bg-surface-container border border-outline/10 p-6 rounded-2xl">
+<div class="flex items-center gap-3 mb-5 text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="schedule">schedule</span>
+<span class="text-xs font-bold uppercase tracking-widest">Duration</span>
+</div>
+<div class="relative group">
+<select class="w-full bg-surface-container-high border border-outline/10 rounded-xl text-white font-medium focus:ring-2 focus:ring-primary/20 focus:border-primary/40 py-4 px-5 appearance-none cursor-pointer">
+<option>Started today</option>
+<option>2-3 days ago</option>
+<option>About a week</option>
+<option>More than 2 weeks</option>
+</select>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Severity -->
+<div class="bg-surface-container border border-outline/10 p-6 rounded-2xl">
+<div class="flex items-center gap-3 mb-5 text-accent">
+<span class="material-symbols-outlined text-xl" data-icon="bar_chart">bar_chart</span>
+<span class="text-xs font-bold uppercase tracking-widest">Severity</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 py-3.5 rounded-xl bg-surface-container-high border border-outline/10 text-on-surface-variant text-sm font-bold hover:bg-slate-800 hover:text-white transition-all active:scale-95">Mild</button>
+<button class="flex-1 py-3.5 rounded-xl bg-accent/10 border border-accent/30 text-accent text-sm font-bold hover:bg-accent/20 transition-all active:scale-95">Moderate</button>
+<button class="flex-1 py-3.5 rounded-xl bg-surface-container-high border border-outline/10 text-on-surface-variant text-sm font-bold hover:bg-slate-800 hover:text-white transition-all active:scale-95">Severe</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Trust Badge Card -->
+<div class="bg-gradient-to-br from-[#0f172a] to-[#020617] border border-primary/20 p-6 rounded-2xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">Clinical Security</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface-variant mb-6">
+                        Your data is encrypted end-to-end and analyzed against latest <span class="text-white font-semibold">WHO &amp; CDC</span> protocols.
+                    </p>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2.5">
+<div class="w-9 h-9 rounded-full border-2 border-slate-900 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a medical professional doctor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUKlDuTouUZQ3laiaZPl66uYCxxh54nqr2Mq5BvJMtBQ6JVzK7bewjguGVCB4JtCaBJkn1ExfhD3pY4oE-DpyajaoTzpj-aJMgWWbAHbudMIg9H23WSx6n1e7-spCPbHuTqYupE1jPJms31EzPg2C7GnBnecF6kljNgYjXoElmFeVS5R2vZdHgXk-uBejXaDuhbmwYJ2FGfFUhIBoqF_zVrNE8tsmntq_o1sZxMcNjJAOPdLD8Xk6d1XvfS7IB4EA4_-Nietp2y4U"/>
+</div>
+<div class="w-9 h-9 rounded-full border-2 border-slate-900 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a health researcher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSFRnZ5I0zHRhTD8cy1CSt45vZrddOGTTBH4VKbmakpR5Y3OFXwpO51mELuFlAmk6BWZoMabcRu0DCfk8X_zbS2jxL9K-53SlxItcQxG_By05iQmAVn56TP9Bwtiv-WL9I5zYwHiaGNJ7exN834GmX94vmgk5FhkGYUwELr2obnLTrYDs-F4w5x9GYiT96d2bmg1CII93XLnh05c9MV21grta0E7Ymx8tVoZ7XvGmltBDWFu0bUDUW1dhsSMecxJMQM5KpwLzUIY8"/>
+</div>
+<div class="w-9 h-9 rounded-full border-2 border-slate-900 bg-surface-container flex items-center justify-center text-[10px] font-bold text-primary">
+                                +12
+                            </div>
+</div>
+<span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Expert Verified</span>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+</div>
+<!-- Tips Card -->
+<div class="bg-surface-container/50 border border-outline/5 p-6 rounded-2xl">
+<h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-6">Optimizing Insights</h3>
+<ul class="space-y-5">
+<li class="flex gap-4 items-start group">
+<div class="mt-0.5 p-1 rounded bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<p class="text-[13px] text-on-surface-variant leading-snug group-hover:text-on-surface transition-colors">Be specific about where exactly pain is felt.</p>
+</li>
+<li class="flex gap-4 items-start group">
+<div class="mt-0.5 p-1 rounded bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<p class="text-[13px] text-on-surface-variant leading-snug group-hover:text-on-surface transition-colors">Mention triggers like activities or food.</p>
+</li>
+<li class="flex gap-4 items-start group">
+<div class="mt-0.5 p-1 rounded bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<p class="text-[13px] text-on-surface-variant leading-snug group-hover:text-on-surface transition-colors">Include your known pre-existing conditions.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<div class="mt-16 flex flex-col items-center">
+<button class="group relative flex items-center gap-4 px-12 py-5 bg-primary text-on-primary rounded-2xl font-bold text-lg shadow-[0_15px_30px_rgba(34,211,238,0.25)] hover:shadow-[0_20px_40px_rgba(34,211,238,0.35)] hover:-translate-y-1 active:translate-y-0 active:scale-95 transition-all duration-300">
+<span class="tracking-wide">Start AI Analysis</span>
+<span class="material-symbols-outlined group-hover:translate-x-1.5 transition-transform duration-300" data-icon="arrow_forward">arrow_forward</span>
+<div class="absolute inset-0 rounded-2xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<!-- Disclaimer -->
+<div class="mt-12 text-center max-w-2xl">
+<p class="text-[10px] text-slate-600 leading-relaxed uppercase tracking-wider font-medium">
+                Important: ClinicaPulse is for informational utility and not a professional diagnosis. In emergencies, contact 911 or local services immediately.
+            </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#091328] rounded-t-2xl">
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined text-2xl" data-icon="home_health">home_health</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-cyan-400 bg-cyan-400/10 rounded-xl px-4 py-2 active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined text-2xl" data-icon="stethoscope" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
+<span class="font-inter text-[10px] font-bold tracking-wide">Checker</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined text-2xl" data-icon="history_edu">history_edu</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined text-2xl" data-icon="person_filled" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Profile</span>
+</button>
+</nav>
+<!-- Desktop Side Nav (Refined for Dark Mode) -->
+<aside class="hidden xl:flex fixed left-0 top-0 bottom-0 w-24 flex-col items-center py-10 gap-10 bg-[#060e20] border-r border-white/5 z-40">
+<div class="p-3.5 rounded-2xl bg-primary/10 text-primary shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+<span class="material-symbols-outlined" data-icon="home_health">home_health</span>
+</div>
+<div class="p-3.5 rounded-2xl text-slate-600 hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</div>
+<div class="p-3.5 rounded-2xl text-slate-600 hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</div>
+<div class="mt-auto p-3.5 rounded-2xl text-slate-600 hover:bg-white/5 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+</aside>
+</body></html>

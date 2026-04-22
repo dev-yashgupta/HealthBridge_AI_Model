@@ -1,0 +1,39 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P102
+  Report Time  : 13 Apr 2026, 12:14 AM
+  Input Text   : "pet mein dard hai, dast lag rahe hain, ulti bhi"
+  Duration     : Unknown
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * stomach_pain                        [weight: 5]
+  * vomiting                            [weight: 5]
+  * diarrhoea                           [weight: 6]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : stomach_pain, vomiting, diarrhoea
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Gastroenteritis                 70.3%  [!!] HIGH
+       Matched  : diarrhoea, vomiting
+
+  #2  GERD                            41.1%  [ !] MEDIUM
+       Matched  : stomach_pain, vomiting
+       Missing  : chest_pain
+
+  #3  Paralysis (brain hemorrhage)    41.1%  [ !] MEDIUM
+       Matched  : vomiting
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Gastroenteritis):
+  -> Stool culture, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Aaj hi doctor se milein. Ye symptoms serious ho sakte hain.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

@@ -1,0 +1,40 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : GUEST
+  Report Time  : 18 Apr 2026, 03:39 PM
+  Input Text   : "Headache Nausea Nausea"
+  Duration     : Unknown
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * headache                            [weight: 3]
+  * nausea                              [weight: 5]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-18 : headache, high_fever, nausea
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Malaria                         50.7%  [ !] MEDIUM  [history boost]
+       Matched  : headache, high_fever, nausea
+       Missing  : diarrhoea
+
+  #2  Impetigo                        42.4%  [ !] MEDIUM  [history boost]
+       Matched  : high_fever
+
+  #3  AIDS                            38.3%  [  ] LOW  [history boost]
+       Matched  : high_fever
+       Missing  : patches_in_throat
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Malaria):
+  -> RDT, Peripheral smear, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

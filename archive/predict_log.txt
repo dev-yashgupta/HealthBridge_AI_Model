@@ -1,0 +1,42 @@
+Best Model: Random Forest (Accuracy: 0.8427)
+======================================================================
+
+Symptoms: fever headache chills
+Matched: ['Fever', 'Headache', 'Chills']
+  1. Hypothermia                                  23.51%
+  2. Hypertension                                 16.0%
+  3. Fever                                        15.49%
+  4. Malaria                                      13.04%
+  5. Dengue                                       11.16%
+
+Symptoms: cough chest pain difficulty breathing
+Matched: ['Barking cough', 'Burning sensation in chest', 'Abdominal pain', 'Difficulty achieving erection', 'Difficulty breathing']
+  1. COPD                                         13.5%
+  2. Croup                                        13.0%
+  3. Asthma                                       12.5%
+  4. Esophagitis                                  8.73%
+  5. Cardiovascular disease                       7.63%
+
+Symptoms: joint pain skin rash fatigue
+Matched: ['Joint deformities', 'Abdominal pain', 'Bronze skin', 'Butterfly rash across face', 'Fatigue']
+  1. Chronic fatigue syndrome                     21.5%
+  2. Addison's disease                            16.58%
+  3. Systemic lupus erythematosus (SLE)           11.5%
+  4. Appendicitis                                 9.5%
+  5. Rheumatoid arthritis                         9.26%
+
+Symptoms: abdominal pain vomiting diarrhea
+Matched: ['Abdominal bloating', 'Abdominal pain', 'Vomiting', 'Alternating constipation and diarrhea']
+  1. Inflammatory bowel disease (IBD)             21.5%
+  2. Gastritis                                    20.0%
+  3. Food poisoning                               18.0%
+  4. Irritable bowel syndrome                     10.87%
+  5. Viral infection                              10.0%
+
+Symptoms: blurred vision frequent urination excessive thirst
+Matched: ['Blurred vision', 'Blind spots in vision', 'Dropping objects frequently', 'Burning urination', 'Excessive belching', 'Excessive thirst']
+  1. Kidney disease                               22.5%
+  2. Glaucoma                                     14.5%
+  3. Prostatitis                                  13.5%
+  4. Gastroesophageal reflux                      9.0%
+  5. Functional dyspepsia                         7.0%

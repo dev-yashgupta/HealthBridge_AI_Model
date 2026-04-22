@@ -1,0 +1,37 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P104
+  Report Time  : 13 Apr 2026, 12:14 AM
+  Input Text   : "khujli ho rahi hai poore badan mein, skin pe daane nikal aaye hain"
+  Duration     : Unknown
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * itching                             [weight: 1]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : itching
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Fungal infection                14.4%  [  ] LOW
+       Matched  : itching
+
+  #2  Drug Reaction                    7.7%  [  ] LOW
+       Matched  : itching
+       Missing  : burning_micturition
+
+  #3  Chronic cholestasis              4.4%  [  ] LOW
+       Matched  : itching
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Fungal infection):
+  -> KOH test, Skin biopsy
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Ghar pe rest karein. Agar 3 din mein theek na ho toh doctor se milein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

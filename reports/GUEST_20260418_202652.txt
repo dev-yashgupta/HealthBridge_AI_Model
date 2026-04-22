@@ -1,0 +1,38 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : GUEST
+  Report Time  : 18 Apr 2026, 08:26 PM
+  Input Text   : "Headache"
+  Duration     : Unknown
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * Headache                            [severity: 3/7]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-18 : Headache, High Fever, Nausea, Cough
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Malaria                         50.7%  [ !] MEDIUM  [history boost]
+       Matched  : Headache, High Fever, Nausea
+       Missing  : Diarrhoea
+
+  #2  Bronchial Asthma                45.2%  [ !] MEDIUM  [history boost]
+       Matched  : Cough, High Fever
+
+  #3  Impetigo                        42.4%  [ !] MEDIUM  [history boost]
+       Matched  : High Fever
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Malaria):
+  -> RDT, Peripheral smear, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] See a doctor within 2-3 days. Monitor your symptoms closely.
+
+-- DISCLAIMER ----------------------------------------------
+  This report is an AI-based suggestion only.
+  Please consult a registered medical professional for diagnosis.
+============================================================

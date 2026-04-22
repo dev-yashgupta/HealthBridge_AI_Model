@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-surface: #1a1b21;
+  --color-error: #ba1a1a;
+  --color-background: #faf8ff;
+  --color-on-tertiary-container: #fe9562;
+  --color-on-secondary-fixed-variant: #005047;
+  --color-surface-tint: #365bad;
+  --color-primary-fixed: #dae2ff;
+  --color-on-secondary-container: #006f62;
+  --color-error-container: #ffdad6;
+  --color-primary-container: #103e8f;
+  --color-on-background: #1a1b21;
+  --color-surface-container-highest: #e2e2e9;
+  --color-tertiary-container: #752c00;
+  --color-on-tertiary-fixed: #351000;
+  --color-tertiary-fixed-dim: #ffb694;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary: #511c00;
+  --color-on-primary-fixed-variant: #174293;
+  --color-surface: #faf8ff;
+  --color-primary: #002869;
+  --color-on-primary-fixed: #001946;
+  --color-surface-container: #eeedf5;
+  --color-surface-variant: #e2e2e9;
+  --color-surface-bright: #faf8ff;
+  --color-on-secondary-fixed: #00201b;
+  --color-on-primary: #ffffff;
+  --color-outline: #747783;
+  --color-on-surface-variant: #434651;
+  --color-surface-dim: #dad9e1;
+  --color-secondary-fixed-dim: #7ad7c6;
+  --color-tertiary-fixed: #ffdbcc;
+  --color-secondary-fixed: #97f3e2;
+  --color-secondary-container: #94f0df;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed-variant: #7a3003;
+  --color-primary-fixed-dim: #b1c5ff;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-surface-container-high: #e8e7ef;
+  --color-secondary: #006b5e;
+  --color-inverse-surface: #2f3036;
+  --color-outline-variant: #c4c6d3;
+  --color-inverse-primary: #b1c5ff;
+  --color-inverse-on-surface: #f1f0f8;
+  --color-surface-container-low: #f4f3fa;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #8eadff;
+
+  --font-headline: "Public Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  body {
+    background-color: #1a1b21;
+    color: #dae2ff;
+    min-height: max(884px, 100dvh);
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .neon-accent {
+    box-shadow: 0 0 15px rgba(151, 243, 226, 0.3);
+  }
+  .glass-panel {
+    backdrop-filter: blur(20px);
+    background: rgba(26, 27, 33, 0.8);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@keyframes float-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4%);
+  }
+}

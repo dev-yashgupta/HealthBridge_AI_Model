@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SehatSetu AI - Predictive Analysis</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: rgba(22, 28, 45, 0.6);
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --primary-accent: #00f2fe;
+            --primary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --secondary-gradient: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(79, 172, 254, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(253, 160, 133, 0.15), transparent 25%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Glassmorphism Panel */
+        .panel {
+            background: var(--surface-color);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--surface-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .panel:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Input Area */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1.1rem;
+        }
+
+        textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.2rem;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            resize: vertical;
+            min-height: 120px;
+            transition: all 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.1);
+        }
+
+        button {
+            align-self: center;
+            background: var(--primary-gradient);
+            color: #000;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px -10px var(--primary-accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px -10px var(--primary-accent);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Loader */
+        .loader {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top-color: #000;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Results Area */
+        #results-container {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .top-disease {
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* Matched Symptoms Tags */
+        .symptoms-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .tag.matched {
+            border-color: rgba(79, 172, 254, 0.5);
+            background: rgba(79, 172, 254, 0.1);
+        }
+
+        .tag.unmatched {
+            border-color: rgba(255, 99, 132, 0.5);
+            background: rgba(255, 99, 132, 0.1);
+            color: #ffb3c1;
+        }
+
+        /* Progress Bars */
+        .prediction-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .prediction-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .bar-bg {
+            width: 100%;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: var(--primary-gradient);
+            width: 0;
+            /* Animated in JS */
+            transition: width 1s cubic-bezier(0.1, 0.8, 0.2, 1);
+        }
+
+        /* Error Message */
+        #error-message {
+            display: none;
+            background: rgba(255, 99, 132, 0.1);
+            border: 1px solid rgba(255, 99, 132, 0.3);
+            color: #ffb3c1;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>HealthBridge AI</h1>
+            <p class="subtitle">Advanced Disease Predicton Platform</p>
+        </header>
+
+        <!-- Input Panel -->
+        <div class="panel">
+            <div class="input-group">
+                <label for="symptoms-input">Enter Symptoms</label>
+                <textarea id="symptoms-input"
+                    placeholder="e.g. I have a severe headache, high fever, and I am feeling very nauseous..."></textarea>
+
+                <div id="error-message"></div>
+
+                <button id="analyze-btn" onclick="runAnalysis()">
+                    <span>Analyze Symptoms</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="panel" id="results-container">
+            <div class="results-header">
+                <h2>Analysis Results</h2>
+                <div class="top-disease" id="top-disease">Disease Name</div>
+            </div>
+
+            <div style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Identified Symptoms:</div>
+            <div class="symptoms-tags" id="symptoms-tags">
+                <!-- Tags will be dynamically inserted here -->
+            </div>
+
+            <h3 style="margin-bottom: 1rem; font-weight: 500;">Top Predictions</h3>
+            <div id="predictions-list">
+                <!-- Predictions will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Logic -->
+    <script>
+        async function runAnalysis() {
+            const symptoms = document.getElementById('symptoms-input').value;
+            const btn = document.getElementById('analyze-btn');
+            const loader = document.getElementById('loader');
+            const btnText = btn.querySelector('span');
+            const resultsContainer = document.getElementById('results-container');
+            const errorContainer = document.getElementById('error-message');
+
+            // Reset States
+            errorContainer.style.display = 'none';
+            resultsContainer.style.display = 'none';
+            document.getElementById('predictions-list').innerHTML = '';
+            document.getElementById('symptoms-tags').innerHTML = '';
+
+            if (!symptoms.trim()) {
+                showError("Please enter some symptoms before analyzing.");
+                return;
+            }
+
+            // Loading State
+            btn.disabled = true;
+            btnText.innerText = 'Analyzing...';
+            loader.style.display = 'block';
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ symptoms })
+                });
+
+                const json = await response.json();
+
+                if (json.success) {
+                    displayResults(json.data);
+                } else {
+                    showError(json.error || "An error occurred during prediction.");
+                }
+
+            } catch (error) {
+                showError("Failed to connect to the prediction server.");
+                console.error(error);
+            } finally {
+                // Restore State
+                btn.disabled = false;
+                btnText.innerText = 'Analyze Symptoms';
+                loader.style.display = 'none';
+            }
+        }
+
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('results-container');
+
+            // Set Top Disease
+            document.getElementById('top-disease').innerText = data.top_disease;
+
+            // Set Matched & Unmatched Symptoms
+            const tagsContainer = document.getElementById('symptoms-tags');
+            data.matched_symptoms.forEach(sym => {
+                const tag = document.createElement('div');
+                tag.className = 'tag matched';
+                tag.innerText = sym;
+                tagsContainer.appendChild(tag);
+            });
+
+            data.unmatched_symptoms.forEach(sym => {
+                const tag = document.createElement('div');
+                tag.className = 'tag unmatched';
+                tag.innerText = sym;
+                tag.title = "Unrecognized term";
+                tagsContainer.appendChild(tag);
+            });
+
+            // Set Predictions
+            const listContainer = document.getElementById('predictions-list');
+            data.predictions.forEach(pred => {
+                const item = document.createElement('div');
+                item.className = 'prediction-item';
+
+                // Color grading based on confidence
+                let bgGradient = 'var(--primary-gradient)';
+                if (pred.confidence < 20) bgGradient = 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)';
+                if (pred.confidence > 70) bgGradient = 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)';
+
+                item.innerHTML = `
+                    <div class="prediction-info">
+                        <span>${pred.disease}</span>
+                        <span>${pred.confidence.toFixed(1)}%</span>
+                    </div>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="background: ${bgGradient};" data-width="${pred.confidence}%"></div>
+                    </div>
+                `;
+                listContainer.appendChild(item);
+            });
+
+            resultsContainer.style.display = 'block';
+
+            // Animate progress bars shortly after display
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.bar-fill');
+                fills.forEach(fill => {
+                    fill.style.width = fill.getAttribute('data-width');
+                });
+            }, 50);
+        }
+
+        function showError(msg) {
+            const errorContainer = document.getElementById('error-message');
+            errorContainer.innerText = msg;
+            errorContainer.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

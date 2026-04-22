@@ -1,0 +1,35 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P103
+  Report Time  : 13 Apr 2026, 12:14 AM
+  Input Text   : "sar mein bahut dard hai, aankhon ke peeche dard, body mein dard"
+  Duration     : Unknown
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * pain_behind_the_eyes                [weight: 4]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : pain_behind_the_eyes
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  (vertigo) Paroymsal  Positional Vertigo   0.0%  [  ] LOW
+       Missing  : spinning_movements
+
+  #2  AIDS                             0.0%  [  ] LOW
+       Missing  : high_fever, patches_in_throat
+
+  #3  Acne                             0.0%  [  ] LOW
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis ((vertigo) Paroymsal  Positional Vertigo):
+  -> ENT consult, Dix-Hallpike test
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Ghar pe rest karein. Agar 3 din mein theek na ho toh doctor se milein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

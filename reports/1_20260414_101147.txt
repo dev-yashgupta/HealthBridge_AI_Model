@@ -1,0 +1,37 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : 1
+  Report Time  : 14 Apr 2026, 10:11 AM
+  Input Text   : "fever from 21 day "
+  Duration     : 21 day(s)
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * high_fever                          [weight: 7]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-14 : stomach_pain, vomiting, diarrhoea, headache, high_fever
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Malaria                         71.0%  [!!] HIGH  [history boost]
+       Matched  : diarrhoea, headache, high_fever, vomiting
+
+  #2  Gastroenteritis                 70.3%  [!!] HIGH  [history boost]
+       Matched  : diarrhoea, vomiting
+
+  #3  Paralysis (brain hemorrhage)    65.7%  [ !] MEDIUM  [history boost]
+       Matched  : headache, vomiting
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Malaria):
+  -> RDT, Peripheral smear, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Aaj hi doctor se milein. Ye symptoms serious ho sakte hain.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

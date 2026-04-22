@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Precision | History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1a1b21",
+                    "error": "#ba1a1a",
+                    "background": "#faf8ff",
+                    "on-tertiary-container": "#fe9562",
+                    "on-secondary-fixed-variant": "#005047",
+                    "surface-tint": "#365bad",
+                    "primary-fixed": "#dae2ff",
+                    "on-secondary-container": "#006f62",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#103e8f",
+                    "on-background": "#1a1b21",
+                    "surface-container-highest": "#e2e2e9",
+                    "tertiary-container": "#752c00",
+                    "on-tertiary-fixed": "#351000",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#511c00",
+                    "on-primary-fixed-variant": "#174293",
+                    "surface": "#faf8ff",
+                    "primary": "#002869",
+                    "on-primary-fixed": "#001946",
+                    "surface-container": "#eeedf5",
+                    "surface-variant": "#e2e2e9",
+                    "surface-bright": "#faf8ff",
+                    "on-secondary-fixed": "#00201b",
+                    "on-primary": "#ffffff",
+                    "outline": "#747783",
+                    "on-surface-variant": "#434651",
+                    "surface-dim": "#dad9e1",
+                    "secondary-fixed-dim": "#7ad7c6",
+                    "tertiary-fixed": "#ffdbcc",
+                    "secondary-fixed": "#97f3e2",
+                    "secondary-container": "#94f0df",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e8e7ef",
+                    "secondary": "#006b5e",
+                    "inverse-surface": "#2f3036",
+                    "outline-variant": "#c4c6d3",
+                    "inverse-primary": "#b1c5ff",
+                    "inverse-on-surface": "#f1f0f8",
+                    "surface-container-low": "#f4f3fa",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#8eadff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-accent {
+            color: #94f0df; /* secondary-container mapped to neon cyan vibe */
+            text-shadow: 0 0 8px rgba(148, 240, 223, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#1a1b21] font-body text-[#c4c6d3] selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#1a1b21] opacity-80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile portrait" class="w-full h-full object-cover" data-alt="Professional studio portrait of a male doctor in a dark navy suit against a deep charcoal background, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqHeBW2sImAFaDGvPndPtEwbpD-bFBZ1j1yyfbe1BrObwVA7zCw_puN0QiApG7T-mrFoSQDpBNjrcNpGlRyup45zONwYhPM6GETHm9_6F17JhWADJeonXuzmH6mlE7dcwtH6aFIExR4rmSX5AEYG3k-ofpDH53vi139I6BcKF806tNeQE9iMNZ4KhZ7bdK80qMWiNkNHb-zdkY_CzRcqaADVQKlhUN1pU81Mi1vDiov5ZuOrPDnfxf_BVWm3_0VUFo6ujQc2exUzs"/>
+</div>
+<span class="font-headline font-bold text-lg tracking-tight text-[#dae2ff]">Clinical Precision</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#dae2ff] p-2 hover:bg-[#2b2d35] transition-colors rounded-xl active:scale-95 duration-200" data-icon="notifications">notifications</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10">
+<h1 class="font-headline text-5xl font-extrabold text-[#dae2ff] mb-2 tracking-tighter">History</h1>
+<p class="text-on-surface-variant max-w-md">Your clinical longitudinal record. Monitor past assessments and health transitions with precision.</p>
+</div>
+<!-- Search and Filter Bento Area -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+<div class="md:col-span-3 relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-[#434651] group-focus-within:text-secondary-container">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-[#2b2d35] border-none rounded-xl py-4 pl-12 pr-4 text-[#dae2ff] placeholder-[#434651] focus:ring-2 focus:ring-secondary-container/50 transition-all outline-none" placeholder="Search conditions, symptoms, or dates..." type="text"/>
+</div>
+<div class="md:col-span-1">
+<button class="w-full h-full bg-[#2b2d35] hover:bg-[#32353f] text-[#dae2ff] rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-medium">Filter</span>
+</button>
+</div>
+</div>
+<!-- History Content: Asymmetric Tonal Layout -->
+<div class="space-y-6">
+<!-- Timeline Item 1 -->
+<div class="relative pl-8 md:pl-0">
+<!-- Vertical Line Connector -->
+<div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-[1px] bg-[#2b2d35]"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:text-right pr-12">
+<span class="text-secondary-container font-headline font-bold text-sm tracking-widest uppercase">OCT 12, 2023</span>
+<h3 class="text-[#dae2ff] text-2xl font-bold mt-1">Common Cold</h3>
+<p class="text-on-surface-variant text-sm mt-2">Symptoms reported: Nasal congestion, mild cough, fatigue.</p>
+</div>
+<div class="relative">
+<!-- Neon Node -->
+<div class="hidden md:block absolute -left-[45px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-secondary-container shadow-[0_0_15px_rgba(148,240,223,0.6)] z-10"></div>
+<div class="bg-[#2b2d35] p-6 rounded-2xl border border-[#c4c6d3]/10 hover:border-secondary-container/30 transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs font-bold text-[#434651] block mb-1">CONFIDENCE SCORE</span>
+<span class="text-3xl font-headline font-extrabold neon-accent">85%</span>
+</div>
+<span class="bg-[#103e8f]/30 text-[#8eadff] text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Resolved</span>
+</div>
+<div class="w-full bg-[#1a1b21] h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[85%]" style="box-shadow: 0 0 10px rgba(148,240,223,0.4)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-8 md:pl-0">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:order-2 md:text-left pl-12">
+<span class="text-secondary-container font-headline font-bold text-sm tracking-widest uppercase">SEP 28, 2023</span>
+<h3 class="text-[#dae2ff] text-2xl font-bold mt-1">Tension Headache</h3>
+<p class="text-on-surface-variant text-sm mt-2">Symptoms reported: Pressure around temples, neck stiffness.</p>
+</div>
+<div class="relative md:order-1">
+<div class="hidden md:block absolute -right-[43px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-secondary-container shadow-[0_0_15px_rgba(148,240,223,0.6)] z-10"></div>
+<div class="bg-[#2b2d35] p-6 rounded-2xl border border-[#c4c6d3]/10 hover:border-secondary-container/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs font-bold text-[#434651] block mb-1">CONFIDENCE SCORE</span>
+<span class="text-3xl font-headline font-extrabold neon-accent">92%</span>
+</div>
+<span class="bg-[#103e8f]/30 text-[#8eadff] text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Follow-up</span>
+</div>
+<div class="w-full bg-[#1a1b21] h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[92%]" style="box-shadow: 0 0 10px rgba(148,240,223,0.4)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-8 md:pl-0">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="md:text-right pr-12">
+<span class="text-secondary-container font-headline font-bold text-sm tracking-widest uppercase">AUG 05, 2023</span>
+<h3 class="text-[#dae2ff] text-2xl font-bold mt-1">Seasonal Allergy</h3>
+<p class="text-on-surface-variant text-sm mt-2">Symptoms reported: Sneezing, itchy eyes, runny nose.</p>
+</div>
+<div class="relative">
+<div class="hidden md:block absolute -left-[45px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#434651] z-10"></div>
+<div class="bg-[#2b2d35] p-6 rounded-2xl border border-[#c4c6d3]/10 hover:border-secondary-container/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs font-bold text-[#434651] block mb-1">CONFIDENCE SCORE</span>
+<span class="text-3xl font-headline font-extrabold neon-accent">78%</span>
+</div>
+<span class="bg-[#103e8f]/30 text-[#8eadff] text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Resolved</span>
+</div>
+<div class="w-full bg-[#1a1b21] h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[78%]" style="box-shadow: 0 0 10px rgba(148,240,223,0.4)"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Stats Bento -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-gradient-to-br from-[#103e8f] to-[#002869] p-8 rounded-3xl col-span-1 md:col-span-2 relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-[#dae2ff] font-bold text-xl mb-4">Recovery Efficiency</h4>
+<p class="text-[#8eadff] mb-6 max-w-xs">Your symptoms are resolving 12% faster than last quarter due to consistent medication adherence.</p>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-bold text-sm hover:brightness-110 active:scale-95 transition-all">View Analytics</button>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10 scale-150 rotate-12 transition-transform group-hover:rotate-6 duration-700">
+<span class="material-symbols-outlined text-[200px]">monitoring</span>
+</div>
+</div>
+<div class="bg-[#2b2d35] p-8 rounded-3xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<div class="text-4xl font-headline font-extrabold text-[#dae2ff]">14</div>
+<div class="text-[#434651] text-sm font-bold uppercase tracking-widest">Checks in 2023</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#1a1b21] border-t border-[#c4c6d3]/15 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] rounded-t-xl">
+<div class="flex justify-around items-center w-full px-2 pb-safe pt-2">
+<a class="flex flex-col items-center justify-center text-[#434651] px-4 py-1.5 hover:bg-[#2b2d35] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#434651] px-4 py-1.5 hover:bg-[#2b2d35] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-['Inter'] text-[11px] font-medium">Checker</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#002869] text-[#dae2ff] rounded-xl px-4 py-1.5 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] text-[11px] font-medium">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#434651] px-4 py-1.5 hover:bg-[#2b2d35] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

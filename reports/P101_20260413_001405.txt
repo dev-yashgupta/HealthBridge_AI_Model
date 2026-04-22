@@ -1,0 +1,38 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P101
+  Report Time  : 13 Apr 2026, 12:14 AM
+  Input Text   : "teen din se bukhar hai, khansi bhi aa rahi hai aur thakaan bahut hai"
+  Duration     : 3 day(s)
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * fatigue                             [weight: 4]
+  * high_fever                          [weight: 7]
+  * cough                               [weight: 4]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : fatigue, high_fever, cough
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Bronchial Asthma                61.6%  [ !] MEDIUM
+       Matched  : cough, fatigue, high_fever
+
+  #2  Impetigo                        42.4%  [ !] MEDIUM
+       Matched  : high_fever
+
+  #3  Jaundice                        40.8%  [ !] MEDIUM
+       Matched  : fatigue, high_fever
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Bronchial Asthma):
+  -> Spirometry, Peak flow, Chest X-ray
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

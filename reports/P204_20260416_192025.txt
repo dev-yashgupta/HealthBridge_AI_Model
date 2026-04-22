@@ -1,0 +1,38 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P204
+  Report Time  : 16 Apr 2026, 07:20 PM
+  Input Text   : "sans lene mein takleef, chest mein dard"
+  Duration     : Unknown
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * breathlessness                      [weight: 4]
+  * chest_pain                          [weight: 7]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : breathlessness, chest_pain
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Heart attack                    66.6%  [ !] MEDIUM
+       Matched  : breathlessness, chest_pain
+
+  #2  Hypertension                    38.3%  [  ] LOW
+       Matched  : chest_pain
+
+  #3  GERD                            28.8%  [  ] LOW
+       Matched  : chest_pain
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Heart attack):
+  -> ECG, Troponin, Echo
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

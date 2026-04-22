@@ -1,0 +1,38 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : TEST_USER
+  Report Time  : 16 Apr 2026, 12:28 PM
+  Input Text   : "Mujhe do din se pet mein bohot dard hai aur dast ho rahe hain."
+  Duration     : 2 day(s)
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * diarrhoea                           [weight: 6]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : high_fever, headache, diarrhoea
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Malaria                         54.1%  [ !] MEDIUM  [history boost]
+       Matched  : diarrhoea, headache, high_fever
+
+  #2  Impetigo                        42.4%  [ !] MEDIUM  [history boost]
+       Matched  : high_fever
+
+  #3  AIDS                            38.3%  [  ] LOW  [history boost]
+       Matched  : high_fever
+       Missing  : patches_in_throat
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Malaria):
+  -> RDT, Peripheral smear, CBC
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

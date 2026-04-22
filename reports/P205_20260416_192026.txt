@@ -1,0 +1,38 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P205
+  Report Time  : 16 Apr 2026, 07:20 PM
+  Input Text   : "aankhon ka rang peela ho gaya, bhook nahi lagti"
+  Duration     : Unknown
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * loss_of_appetite                    [weight: 4]
+  * yellowish_skin                      [weight: 3]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-16 : loss_of_appetite, yellowish_skin
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Hepatitis C                     32.2%  [  ] LOW
+       Matched  : loss_of_appetite, yellowish_skin
+
+  #2  Chronic cholestasis             31.0%  [  ] LOW
+       Matched  : loss_of_appetite, yellowish_skin
+
+  #3  Hepatitis D                     22.4%  [  ] LOW
+       Matched  : loss_of_appetite, yellowish_skin
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Hepatitis C):
+  -> Anti-HCV, HCV RNA, LFT
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Ghar pe rest karein. Agar 3 din mein theek na ho toh doctor se milein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

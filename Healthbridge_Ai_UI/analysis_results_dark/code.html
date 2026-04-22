@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analysis &amp; Results | ClinicaPulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002869",
+                        "surface": "#060e20",
+                        "on-surface": "#f1f5f9",
+                        "on-surface-variant": "#94a3b8",
+                        "outline": "#334155",
+                        "outline-variant": "#1e293b",
+                        "surface-container": "#0f172a",
+                        "surface-container-low": "#091328",
+                        "surface-container-lowest": "#030712",
+                        "cyan": {
+                            "400": "#22d3ee",
+                            "500": "#06b6d4"
+                        }
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"],
+                        "manrope": ["Manrope", "sans-serif"]
+                    },
+                    "boxShadow": {
+                        "neon": "0 0 15px rgba(34, 211, 238, 0.4)",
+                        "neon-inner": "inset 0 0 10px rgba(34, 211, 238, 0.2)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-card {
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
+        }
+        .glow-card:hover {
+            border-color: rgba(34, 211, 238, 0.4);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+        }
+        .neon-progress-glow {
+            box-shadow: 0 0 8px #22d3ee;
+        }
+        body {
+            min-height: 100dvh;
+            background-color: #060e20;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-[#060e20]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(143,245,255,0.06)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400" data-icon="clinical_notes">clinical_notes</span>
+<h1 class="text-lg font-bold tracking-widest text-cyan-400 font-manrope uppercase">NEON SANCTUM</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-400 p-2 hover:bg-slate-800/40 transition-colors rounded-full active:scale-95 duration-200" data-icon="notifications">notifications</button>
+<div class="w-8 h-8 rounded-full border border-cyan-400/30 overflow-hidden active:scale-95 duration-200 cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0fJMMaf_ongYwB4YvfohBD9ub5xLHCDYnHpY9-rKTXGyaYUZkfDJmw3IzeqjprFCMoMjhhkj9eu-Bj025W0AU8WxxDKhrrmWtt5hRNbx8LbBxf2PMQpAHb1-OBe_eZDOSiJqEqUUSY6n3BaaLLkUt3h-0iPQAjT75TQ28iq21r_IlA6i1vkqKDPRkAiyfFNp8qv2m8yTJq7b367VEUtrBRx00dKaNe-O6bWQD3g3EhOjM0BGRA5CQudicJEVKYGjoi-1pCFTswL8"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Analysis Section -->
+<div class="mb-10">
+<h2 class="text-4xl font-headline font-extrabold text-cyan-400 mb-2">Analysis Results</h2>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">Based on your reported symptoms and medical history, we have compiled a prioritized list of potential health matches and recommended actions.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Potential Matches -->
+<section class="lg:col-span-8 space-y-6">
+<div class="bg-surface-container p-6 rounded-2xl glow-card">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-headline font-bold text-slate-100">Potential Matches</h3>
+<span class="text-[10px] text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Live Assessment</span>
+</div>
+<div class="space-y-6">
+<!-- Match 1 -->
+<div class="group relative bg-surface-container-low p-6 rounded-xl transition-all border border-transparent hover:border-cyan-400/30">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold text-slate-100 mb-1">Common Cold</h4>
+<p class="text-on-surface-variant text-sm">Viral upper respiratory tract infection</p>
+</div>
+<div class="text-right">
+<div class="text-3xl font-extrabold text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">85%</div>
+<div class="text-[10px] uppercase font-bold text-on-surface-variant">Confidence</div>
+</div>
+</div>
+<div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+<div class="bg-cyan-400 h-full w-[85%] rounded-full neon-progress-glow"></div>
+</div>
+</div>
+<!-- Match 2 -->
+<div class="group relative bg-surface-container-low/50 p-6 rounded-xl transition-all border border-transparent hover:border-cyan-400/20">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-xl font-bold text-slate-200">Allergic Rhinitis</h4>
+<p class="text-on-surface-variant text-sm">Environmental trigger response</p>
+</div>
+<div class="text-right">
+<div class="text-2xl font-bold text-slate-400">42%</div>
+<div class="text-[10px] uppercase font-bold text-on-surface-variant">Likelihood</div>
+</div>
+</div>
+<div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+<div class="bg-slate-500 h-full w-[42%] rounded-full opacity-60"></div>
+</div>
+</div>
+<!-- Match 3 -->
+<div class="group relative bg-surface-container-low/50 p-6 rounded-xl transition-all border border-transparent hover:border-cyan-400/20">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-xl font-bold text-slate-200">Acute Bronchitis</h4>
+<p class="text-on-surface-variant text-sm">Inflammation of the bronchial tubes</p>
+</div>
+<div class="text-right">
+<div class="text-2xl font-bold text-slate-400">18%</div>
+<div class="text-[10px] uppercase font-bold text-on-surface-variant">Likelihood</div>
+</div>
+</div>
+<div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+<div class="bg-slate-500 h-full w-[18%] rounded-full opacity-60"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Next Steps -->
+<div class="bg-surface-container p-6 rounded-2xl glow-card">
+<h3 class="text-xl font-headline font-bold text-slate-100 mb-6">Recommended Next Steps</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-cyan-400 flex flex-col gap-4 shadow-lg shadow-black/40">
+<span class="material-symbols-outlined text-cyan-400 text-3xl" data-icon="stethoscope">stethoscope</span>
+<div>
+<h5 class="font-bold text-slate-100">Consult a GP</h5>
+<p class="text-sm text-on-surface-variant">Highly recommended due to your history of Asthma.</p>
+</div>
+<button class="mt-auto text-sm font-bold text-cyan-400 flex items-center gap-1 group transition-all hover:gap-2">
+                            Schedule Call <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-slate-500 flex flex-col gap-4 shadow-lg shadow-black/40">
+<span class="material-symbols-outlined text-slate-300 text-3xl" data-icon="water_drop">water_drop</span>
+<div>
+<h5 class="font-bold text-slate-100">Rest and Hydrate</h5>
+<p class="text-sm text-on-surface-variant">Increase fluid intake to 3L/day and prioritize sleep.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Summary & History -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Summary Card -->
+<div class="bg-gradient-to-br from-cyan-900/40 to-[#060e20] p-8 rounded-2xl border border-cyan-400/20 text-slate-100 relative overflow-hidden glow-card">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #22d3ee 1px, transparent 0); background-size: 24px 24px;"></div>
+<h3 class="text-xl font-headline font-bold mb-4 relative z-10 text-cyan-400">Summary of Analysis</h3>
+<div class="space-y-4 relative z-10">
+<p class="text-slate-300 leading-relaxed text-sm">
+                        Your symptoms of persistent cough and nasal congestion are strongly indicative of a viral infection. 
+                    </p>
+<div class="bg-white/5 p-4 rounded-lg backdrop-blur-md border border-white/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-cyan-400 text-sm" data-icon="history">history</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Medical History Factor</span>
+</div>
+<p class="text-xs text-slate-300">Your existing <strong class="text-cyan-300">Asthma</strong> condition may exacerbate the duration of these symptoms. Monitoring peak flow is advised.</p>
+</div>
+</div>
+</div>
+<!-- Trust Badge -->
+<div class="bg-cyan-400/10 border border-cyan-400/20 p-6 rounded-2xl flex items-center gap-4">
+<div class="bg-cyan-400 text-surface p-2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+<span class="material-symbols-outlined" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h6 class="font-bold text-cyan-100 leading-tight">Algorithm Verified</h6>
+<p class="text-slate-400 text-xs">Analysis cross-referenced with 500k+ clinical cases.</p>
+</div>
+</div>
+<!-- Emergency Banner -->
+<div class="bg-red-500/10 p-6 rounded-2xl border border-red-500/20">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-red-500" data-icon="emergency">emergency</span>
+<h6 class="font-bold text-red-100">When to seek ER?</h6>
+</div>
+<ul class="text-xs text-slate-300 space-y-2 list-disc ml-4">
+<li>Shortness of breath</li>
+<li>High fever (above 103°F)</li>
+<li>Chest pain or pressure</li>
+</ul>
+</div>
+</aside>
+</div>
+<!-- Disclaimer -->
+<footer class="mt-16 text-center border-t border-slate-800 pt-8 pb-10">
+<p class="text-xs text-on-surface-variant italic max-w-2xl mx-auto px-4">
+<strong class="text-slate-400">Disclaimer: Not a medical diagnosis.</strong> ClinicaPulse provides health information based on user-provided data. This is not a substitute for professional medical advice, diagnosis, or treatment. If you are experiencing a medical emergency, call your local emergency services immediately.
+        </p>
+</footer>
+</main>
+<!-- BottomNavBar Shared Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#091328] rounded-t-2xl flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home_health">home_health</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-cyan-400 bg-cyan-400/10 rounded-xl px-3 py-1 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="stethoscope">stethoscope</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Checker</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person_filled">person</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,37 @@
+============================================================
+       HEALTHBRIDGE AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : GUEST
+  Report Time  : 18 Apr 2026, 09:52 PM
+  Input Text   : "Fever, since today, mild symptoms"
+  Duration     : Started today
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * High Fever                          [severity: 7/7]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-18 : Headache, High Fever, Nausea, Cough, Blackheads, Pus Filled Pimples, Scurring, Skin Rash, Loss Of Balance, Fatigue
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Acne                           100.0%  [!!] HIGH  [history boost]
+       Matched  : Blackheads, Pus Filled Pimples, Scurring, Skin Rash
+
+  #2  Bronchial Asthma                61.6%  [ !] MEDIUM  [history boost]
+       Matched  : Cough, Fatigue, High Fever
+
+  #3  Impetigo                        60.5%  [ !] MEDIUM  [history boost]
+       Matched  : High Fever, Skin Rash
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Acne):
+  -> Clinical diagnosis, Hormonal panel
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] Consult a doctor today. These symptoms may be serious.
+
+-- DISCLAIMER ----------------------------------------------
+  This report is an AI-based suggestion only.
+  Please consult a registered medical professional for diagnosis.
+============================================================

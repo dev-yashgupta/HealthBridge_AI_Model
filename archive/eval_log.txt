@@ -1,0 +1,44 @@
+======================================================================
+🏥 SehatSetu AI — Model Evaluation & Visualization
+======================================================================
+
+📊 Loading test data and results...
+   Test samples: 1418
+   Classes: 649
+   ✅ Matplotlib & Seaborn available
+
+📈 Generating comparison charts...
+   ✅ Comparison chart saved: e:/SehatSetu AI/training/results\model_comparison_chart.png
+
+🔲 Generating confusion matrices...
+   ✅ Logistic Regression: e:/SehatSetu AI/training/results\confusion_matrices\cm_logistic_regression.png
+   ✅ Random Forest: e:/SehatSetu AI/training/results\confusion_matrices\cm_random_forest.png
+   ✅ XGBoost: e:/SehatSetu AI/training/results\confusion_matrices\cm_xgboost.png
+   ✅ SVM: e:/SehatSetu AI/training/results\confusion_matrices\cm_svm.png
+   ✅ LSTM: e:/SehatSetu AI/training/results\confusion_matrices\cm_lstm.png
+
+📉 Generating ROC curves...
+   ✅ Combined ROC curve saved: e:/SehatSetu AI/training/results\roc_curves\roc_curves_combined.png
+
+🔑 Generating feature importance (Random Forest)...
+   ✅ Feature importance saved: e:/SehatSetu AI/training/results\feature_importance_rf.png
+
+⏱️  Generating training time chart...
+   ✅ Training time chart saved: e:/SehatSetu AI/training/results\training_time_comparison.png
+
+======================================================================
+📊 FINAL MODEL COMPARISON TABLE
+======================================================================
+              Model  Accuracy  Precision_Macro  Recall_Macro  F1_Macro  Precision_Weighted  Recall_Weighted  F1_Weighted  ROC_AUC  CV_Mean  CV_Std  Train_Time_Sec
+      Random Forest    0.8427           0.5260        0.6095    0.5483              0.8098           0.8427       0.8166      0.0   0.8273  0.0267            7.01
+Logistic Regression    0.8420           0.5257        0.6109    0.5478              0.8101           0.8420       0.8157      0.0   0.8189  0.0359           45.41
+               LSTM    0.8413           0.5357        0.6257    0.5579              0.8074           0.8413       0.8128      0.0   0.0000  0.0000           29.79
+                SVM    0.8096           0.4877        0.5673    0.5031              0.7894           0.8096       0.7852      0.0   0.8015  0.0288           79.33
+            XGBoost    0.6114           0.1587        0.1679    0.1601              0.5982           0.6114       0.6007      0.0   0.5929  0.0136          212.67
+
+🏆 BEST MODEL: Random Forest
+   Accuracy:  0.8427
+   F1 (W):    0.8166
+   ROC-AUC:   0.0000
+
+✅ Evaluation complete! Check the 'results/' folder for all charts and metrics.

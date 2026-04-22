@@ -1,0 +1,99 @@
+======================================================================
+SehatSetu AI - Model Training Pipeline
+======================================================================
+
+[OK] Data loaded: (7089, 508)
+   Features: 507
+   Samples:  7089
+   Classes:  649
+
+[2] Splitting data (80/20 stratified)...
+   Train: 5671 samples
+   Test:  1418 samples
+   Train classes: 649
+   Test classes:  587
+
+[3] Defining model pipelines...
+   [OK] XGBoost available
+   Models to train: ['Logistic Regression', 'Random Forest', 'SVM', 'XGBoost']
+
+======================================================================
+STEP 4: Training Models
+======================================================================
+
+---------------------------------------------------
+Training: Logistic Regression
+---------------------------------------------------
+   Accuracy:       0.8420
+   Precision (W):  0.8101
+   Recall (W):     0.8420
+   F1-Score (W):   0.8157
+   ROC-AUC:        0.0000
+   Cross-Val:      0.8189 +/- 0.0359
+   Train Time:     45.41s
+   Saved to: e:/SehatSetu AI/training/models\logistic_regression.pkl
+
+---------------------------------------------------
+Training: Random Forest
+---------------------------------------------------
+   Accuracy:       0.8427
+   Precision (W):  0.8098
+   Recall (W):     0.8427
+   F1-Score (W):   0.8166
+   ROC-AUC:        0.0000
+   Cross-Val:      0.8273 +/- 0.0267
+   Train Time:     7.01s
+   Saved to: e:/SehatSetu AI/training/models\random_forest.pkl
+
+---------------------------------------------------
+Training: SVM
+---------------------------------------------------
+   Accuracy:       0.8096
+   Precision (W):  0.7894
+   Recall (W):     0.8096
+   F1-Score (W):   0.7852
+   ROC-AUC:        0.0000
+   Cross-Val:      0.8015 +/- 0.0288
+   Train Time:     79.33s
+   Saved to: e:/SehatSetu AI/training/models\svm.pkl
+
+---------------------------------------------------
+Training: XGBoost
+---------------------------------------------------
+   Accuracy:       0.6114
+   Precision (W):  0.5982
+   Recall (W):     0.6114
+   F1-Score (W):   0.6007
+   ROC-AUC:        0.0000
+   Cross-Val:      0.5929 +/- 0.0136
+   Train Time:     212.67s
+   Saved to: e:/SehatSetu AI/training/models\xgboost.pkl
+
+---------------------------------------------------
+Training: LSTM (Deep Learning)
+---------------------------------------------------
+   LSTM Parameters: 467,081
+   Accuracy:       0.8413
+   Precision (W):  0.8074
+   Recall (W):     0.8413
+   F1-Score (W):   0.8128
+   ROC-AUC:        0.0000
+   Train Time:     29.79s
+   Epochs Run:     26
+   LSTM model saved
+
+======================================================================
+STEP 6: MODEL COMPARISON
+======================================================================
+
+              Model  Accuracy  Precision_Macro  Recall_Macro  F1_Macro  Precision_Weighted  Recall_Weighted  F1_Weighted  ROC_AUC  CV_Mean  CV_Std  Train_Time_Sec
+      Random Forest    0.8427           0.5260        0.6095    0.5483              0.8098           0.8427       0.8166      0.0   0.8273  0.0267            7.01
+Logistic Regression    0.8420           0.5257        0.6109    0.5478              0.8101           0.8420       0.8157      0.0   0.8189  0.0359           45.41
+               LSTM    0.8413           0.5357        0.6257    0.5579              0.8074           0.8413       0.8128      0.0   0.0000  0.0000           29.79
+                SVM    0.8096           0.4877        0.5673    0.5031              0.7894           0.8096       0.7852      0.0   0.8015  0.0288           79.33
+            XGBoost    0.6114           0.1587        0.1679    0.1601              0.5982           0.6114       0.6007      0.0   0.5929  0.0136          212.67
+
+[BEST] Best Model: Random Forest (Accuracy: 0.8427)
+   Best model copied to: e:/SehatSetu AI/training/models\best_model.pkl
+
+[OK] All models trained and compared! Run evaluate_models.py for visualizations.

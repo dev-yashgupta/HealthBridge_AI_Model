@@ -1,0 +1,39 @@
+============================================================
+       SEHATSETU AI  --  MEDICAL REPORT
+============================================================
+
+  Patient ID   : P104
+  Report Time  : 13 Apr 2026, 07:06 PM
+  Input Text   : "khujli ho rahi hai poore badan mein, daane nikle"
+  Duration     : Unknown
+  NLP Method   : Keyword Matching
+
+-- SYMPTOMS DETECTED ---------------------------------------
+  * itching                             [weight: 1]
+  * skin_rash                           [weight: 3]
+
+-- SYMPTOM HISTORY (last 7 days) ---------------------------
+  2026-04-13 : itching, skin_rash
+
+-- TOP DIAGNOSIS -------------------------------------------
+  #1  Fungal infection                57.5%  [ !] MEDIUM
+       Matched  : itching, skin_rash
+
+  #2  Acne                            38.3%  [  ] LOW
+       Matched  : skin_rash
+
+  #3  Drug Reaction                   30.7%  [  ] LOW
+       Matched  : itching, skin_rash
+       Missing  : burning_micturition
+
+-- RECOMMENDED TESTS ---------------------------------------
+  Based on top diagnosis (Fungal infection):
+  -> KOH test, Skin biopsy
+
+-- DOCTOR ADVICE -------------------------------------------
+  [!] 2-3 din mein doctor se milein. Symptoms monitor karte rahein.
+
+-- DISCLAIMER ----------------------------------------------
+  Ye report sirf AI-based suggestion hai.
+  Kisi bhi nischay ke liye registered doctor se milein.
+============================================================

@@ -1,0 +1,26 @@
+﻿============================================================
+≡ƒÅÑ SehatSetu AI ΓÇö Disease Prediction System
+============================================================
+
+Γ£à Loaded 505 symptoms from encodings
+   Best model: Random Forest (Accuracy: 0.8427)
+   Γ£à Model loaded successfully
+
+≡ƒöì Input: "fever headache chills"
+   Γ£à Matched symptoms (3): Fever, Headache, Chills
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+≡ƒÅÑ Top 5 Disease Predictions:
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   1. Hypothermia                               23.51% ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+   2. Hypertension                              16.00% ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+   3. Fever                                     15.49% ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+   4. Malaria                                   13.04% ΓûêΓûêΓûêΓûêΓûêΓûê
+   5. Dengue                                    11.16% ΓûêΓûêΓûêΓûêΓûê
+
+≡ƒöæ Key Contributing Symptoms:
+   ΓÇó symptom_count: importance = 0.0625
+   ΓÇó avg_severity: importance = 0.0314
+   ΓÇó Headache: importance = 0.0021
+   ΓÇó Chills: importance = 0.0016
+   ΓÇó Fever: importance = 0.0009
